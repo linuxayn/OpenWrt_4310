@@ -1,0 +1,9 @@
+#debug
+logfile /dev/null
+noaccomp
+nopcomp
+nocrtscts
+lock
+maxfail 5
+lcp-echo-failure 15
+lcp-echo-interval 5

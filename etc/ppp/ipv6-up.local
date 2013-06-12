@@ -1,0 +1,13 @@
+#!/bin/sh
+
+local PREFIX="2001:256:100:3006"
+
+PPP_IFACE=$1
+PPP_REMOTE=$5
+
+logger "Adding IPv6 route for $PPP_IFACE"
+
+ip -6 route del ${PREFIX}:${PPP_REMOTE:6}/128 dev br-lan
+ip -6 route add ${PREFIX}:${PPP_REMOTE:6}/128 dev $PPP_IFACE
+
+

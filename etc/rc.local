@@ -1,0 +1,8 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+mount -t ext3 /dev/sda5 /mnt/sda5
+. /root/ipv6.sh
+. /root/firewall.sh
+echo -1 > /proc/sys/net/ipv4/rt_cache_rebuild_count
+exit 0
