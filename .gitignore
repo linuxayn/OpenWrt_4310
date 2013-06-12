@@ -1,0 +1,11 @@
+#################
+## OpenWrt
+#################
+
+root/.config/
+root/.ssh/
+root/.rnd
+
+etc/shadow*
+etc/passwd*
+etc/dropbear/

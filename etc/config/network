@@ -1,0 +1,91 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config interface 'lan'
+	option ifname 'eth0.1 tap0'
+	option type 'bridge'
+	option proto 'static'
+	option ipaddr '192.168.1.1'
+	option netmask '255.255.255.0'
+
+config interface 'wan'
+	option ifname 'eth0.2'
+	option proto 'static'
+	#Modify to your IP address
+	option ipaddr 'your_ip'
+	option netmask '255.255.255.0'
+	#Modify to your mac address
+	option macaddr 'your_macaddress'
+	option dns '10.10.0.21'
+	option ipv6 '1'
+	option mtu '1452'
+
+config switch
+	option name 'eth0'
+	option reset '1'
+	option enable_vlan '1'
+
+config switch_vlan
+	option device 'eth0'
+	option vlan '1'
+	option ports '0t 2 3 4 5'
+
+config switch_vlan
+	option device 'eth0'
+	option vlan '2'
+	option ports '0t 1'
+
+
+config route
+	option interface 'wan'
+	option target '10.0.0.0'
+	option netmask '255.0.0.0'
+	option gateway '222.205.59.1'
+	option metric '1'
+
+config route
+	option interface 'wan'
+	option target '210.32.137.88'
+	option netmask '255.255.255.248'
+	option gateway '222.205.59.1'
+	option metric '1'
+
+config route
+	option interface 'wan'
+	option target '222.205.46.0'
+	option netmask '255.255.254.0'
+	option gateway '222.205.59.1'
+	option metric '1'
+
+
+config route
+	option interface 'wan'
+	option target '222.205.48.0'
+	option netmask '255.255.248.0'
+	option gateway '222.205.59.1'
+	option metric '1'
+	
+config route
+	option interface 'wan'
+	option target '222.205.56.0'
+	option netmask '255.255.252.0'
+	option gateway '222.205.59.1'
+	option metric '1'
+	
+config route
+	option interface 'wan'
+	option target '222.205.123.0'
+	option netmask '255.255.255.0'
+	option gateway '222.205.59.1'
+	option metric '1'
+	
+config route
+	option interface 'wan'
+	option target '58.206.0.0'
+	option netmask '255.255.0.0'
+	option gateway '222.205.59.1'
+	option metric '1'
