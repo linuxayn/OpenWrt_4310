@@ -1,0 +1,16 @@
+#
+require-mschap-v2
+name l2tpd
+lock
+auth
+#debug
+dump
+logfd 2
+logfile /var/log/xl2tpd.log
+passive
+nodetach
+noccp
+novj
+novjccomp
+nopcomp
+noaccomp
