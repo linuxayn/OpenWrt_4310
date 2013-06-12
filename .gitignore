@@ -9,3 +9,16 @@ root/.rnd
 etc/shadow*
 etc/passwd*
 etc/dropbear/
+
+etc/xl2tpd/xl2tpd.conf
+etc/ppp/chap-secrets
+etc/buildconf.sh
+etc/config/network
+etc/config/wireless
+
+etc/ppp/ip-up.d/radvd_pppx_up.sh
+
+etc/xl2tpd/buildconf.sh
+etc/xl2tpd/xl2tpd.conf
+
+sftp-config.json

@@ -1,0 +1,12 @@
+rootfs / rootfs rw 0 0
+/dev/root /rom squashfs ro,relatime 0 0
+proc /proc proc rw,noatime 0 0
+sysfs /sys sysfs rw,noatime 0 0
+tmpfs /tmp tmpfs rw,nosuid,nodev,noatime,size=63340k 0 0
+tmpfs /dev tmpfs rw,noatime,size=512k,mode=755 0 0
+devpts /dev/pts devpts rw,noatime,mode=600 0 0
+/dev/mtdblock3 /overlay jffs2 rw,noatime 0 0
+overlayfs:/overlay / overlayfs rw,noatime,lowerdir=/,upperdir=/overlay 0 0
+debugfs /sys/kernel/debug debugfs rw,relatime 0 0
+none /proc/bus/usb usbfs rw,relatime 0 0
+/dev/sda5 /mnt/sda5 ext3 rw,relatime,user_xattr,barrier=1,nodelalloc,data=ordered 0 0
